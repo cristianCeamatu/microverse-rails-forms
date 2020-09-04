@@ -1,0 +1,58 @@
+<h1>Users#new</h1>
+<!-- <form action="<%= users_path %>" accept-charset="UTF-8" method="post" id="user-form">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <div class="form-control-group">
+    <label for="username" class="input-label">
+      Username: <input type="text" id="username" name="user[username]">
+    </label>
+  </div>
+
+  <div class="form-control-group">
+    <label for="email" class="input-label">
+      Email: <input type="email" id="email" name="user[email]">
+    </label>
+  </div>
+
+  <div class="form-control-group">
+    <label for="password" class="input-label">
+      Password: <input type="password" id="password" name="user[password]">
+    </label>
+  </div>
+
+  <input type="submit" value="Create account">
+</form> -->
+<!--<div>
+  <%= form_tag(users_path, method: 'post') do %>
+    <%= label_tag :username %>
+    <%= text_field_tag :username %>
+    <%= label_tag :email %>
+    <%= email_field_tag :email %>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+    <%= submit_tag %>
+  <% end %>
+</div> -->
+<h1>Edit</h1>
+<%= form_for(@user) do |f| %>
+  <ul>
+    <% @user.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+  <p>
+    <%= f.label :username, "Your user name here" %><br />
+    <%= f.text_field :username, html: { placeholder: "Input Username"} %>
+  </p>
+  <p>
+    <%= f.label :email, "Your email name here" %><br />
+    <%= f.text_field :email, html: { placeholder: "Input Email"} %>
+  </p>
+  <p>
+    <%= f.label :password, "Your password name here" %><br />
+    <%= f.text_field :password, html: { placeholder: "Input Password"} %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
