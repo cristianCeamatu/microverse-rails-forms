@@ -11,6 +11,7 @@
 
 ## Linters
 * Rubocop
+* Stylelint
 
 ## Prerequisities
 
@@ -34,7 +35,9 @@ Run `rake db:migrate` to create you local database.
 **Step 6**<br>
 Run `rails serve` to start the rails server.
 **Step 7**<br>
-You can navigate to `http://localhost:3000/` to see your personal blog running<br>
+You can navigate to `http://localhost:3000/` to see the project working.<br>
+**Step 8**<br>
+You can access `users/new`, `users/:id/edit` and `users/:id` paths.<br>
 
 ## Authors
 
